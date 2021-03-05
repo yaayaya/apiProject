@@ -1,0 +1,23 @@
+<!-- 指定django模板繼承對象 此為引入base.html-->
+{% extends 'blog/base.html' %}
+
+<!-- 模板製作 後方為變數 -->
+{% block bodyContent %}
+<div align="center">
+    <form method="post" action="./api/username">
+        你的名字：<input type="text" name="username" placeholder="name" />
+        <button type="submit">送出</button>
+
+        <div>
+            <!-- 變數位置 -->
+            var : {{ first_var }} <br />
+            var : {{ second_var }}<br />
+            <ul>
+                {% for e in dataList %}
+                <li>{{ e }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </form>
+</div>
+{% endblock  %}
