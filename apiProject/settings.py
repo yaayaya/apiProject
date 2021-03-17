@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog',
+    'shop'
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,9 @@ USE_TZ = True
 # css, js, imgs 等的檔案，就放在 app 資料夾底下的 static/
 # 而取用方式，舉例 {% static 'css/open-iconic-bootstrap.min.css' %}
 STATIC_URL = '/static/'
+
+
+# 上傳產品圖片後，會存放的地方
+# Media root for storing uploads in model
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
